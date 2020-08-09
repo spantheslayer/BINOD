@@ -85,20 +85,20 @@ if __name__ == '__main__':
 
 
 
-with open(r'data\comments.txt', 'r') as f:
+with open(r'data/comments.txt', 'r') as f:
     foo = [line.strip() for line in f]
 
 # keyword
-with open(r'data\keywords.txt', 'r') as f:
+with open(r'data/keywords.txt', 'r') as f:
     foooo = [line.strip() for line in f]
 
-keywords = open(r'data\keywords.txt', 'r')
+keywords = open(r'data/keywords.txt', 'r')
 x = 10
 while x < 20:
     for line in keywords:
         scrape(line)
 
-        with open(r"data\links.txt", 'r+') as f:
+        with open(r"data/links.txt", 'r+') as f:
             f.readline()
             data = f.read()
             f.seek(0)
@@ -106,7 +106,7 @@ while x < 20:
             f.truncate()
 
             try:
-                with open(r'data\links.txt', 'r') as f:
+                with open(r'data/links.txt', 'r') as f:
                     urls = []
                     for url in f:
                         rand = random.choice(foo)
